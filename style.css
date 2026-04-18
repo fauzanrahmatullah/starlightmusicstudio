@@ -1,0 +1,255 @@
+/* minta font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap');
+
+:root {
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --dark: #0a0a0a;
+  --dark2: #111111;
+  --dark3: #1a1a1a;
+  --dark4: #222222;
+  --text: #e0d6c8;
+  --muted: #7a7060;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--dark);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+}
+
+h1, h2, h3, .brand {
+  font-family: 'Playfair Display', serif;
+}
+
+/* navigasi */
+.navbar {
+  background: rgba(10,10,10,0.97) !important;
+  border-bottom: 1px solid #2a2418;
+  padding: 1rem 0;
+}
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: var(--gold) !important;
+  letter-spacing: 1px;
+}
+.navbar-brand span { color: var(--text); font-size: 0.75rem; display: block; letter-spacing: 3px; font-family: 'DM Sans', sans-serif; font-weight: 300; }
+.nav-link { color: var(--muted) !important; letter-spacing: 1px; font-size: 0.85rem; transition: color .2s; }
+.nav-link:hover, .nav-link.active { color: var(--gold) !important; }
+.navbar-toggler { border-color: var(--muted); }
+
+/* footer */
+footer {
+  background: var(--dark2);
+  border-top: 1px solid #2a2418;
+  padding: 2.5rem 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+footer .brand-foot { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 1.2rem; }
+
+/* heroo     */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #0a0a0a 60%, #1a1408 100%);
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 70%);
+  top: -100px; right: -100px;
+  pointer-events: none;
+}
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  color: #fff;
+}
+.hero-title span { color: var(--gold); }
+.hero-sub {
+  color: var(--muted);
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.hero-desc { color: var(--text); opacity: 0.7; max-width: 480px; line-height: 1.8; }
+.divider-gold { width: 60px; height: 2px; background: var(--gold); margin: 1.5rem 0; }
+
+/* buton */
+.btn-gold {
+  background: var(--gold);
+  color: #000;
+  border: none;
+  padding: 0.7rem 2rem;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  transition: background .2s, transform .1s;
+}
+.btn-gold:hover { background: var(--gold-light); color: #000; transform: translateY(-1px); }
+.btn-outline-gold {
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  background: transparent;
+  padding: 0.7rem 2rem;
+  border-radius: 2px;
+  letter-spacing: 1px;
+  transition: all .2s;
+}
+.btn-outline-gold:hover { background: var(--gold); color: #000; }
+
+/* studio cards */
+.studio-card {
+  background: var(--dark3);
+  border: 1px solid #2a2418;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: border-color .2s, transform .2s;
+}
+.studio-card:hover { border-color: var(--gold); transform: translateY(-3px); }
+.studio-card .card-body { padding: 1.5rem; }
+.studio-card .price-tag {
+  font-family: 'Playfair Display', serif;
+  color: var(--gold);
+  font-size: 1.5rem;
+}
+
+/* section */
+.section { padding: 5rem 0; }
+.section-title {
+  font-size: 2rem;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+.label-gold {
+  color: var(--gold);
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/* list instrumen */
+.gear-item {
+  background: var(--dark4);
+  border-left: 3px solid var(--gold);
+  padding: 0.8rem 1.2rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0 3px 3px 0;
+}
+.gear-item .gear-name { font-weight: 500; color: var(--text); }
+.gear-item .gear-type { font-size: 0.8rem; color: var(--muted); }
+
+/* tabel harga */
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #2a2418;
+}
+.price-row:last-child { border-bottom: none; }
+.price-amount { color: var(--gold); font-family: 'Playfair Display', serif; }
+
+/* form booking */
+.form-control, .form-select {
+  background: var(--dark3) !important;
+  border: 1px solid #2a2418 !important;
+  color: var(--text) !important;
+  border-radius: 3px;
+}
+.form-control:focus, .form-select:focus {
+  border-color: var(--gold) !important;
+  box-shadow: 0 0 0 2px rgba(201,168,76,0.15) !important;
+}
+.form-label { color: var(--muted); font-size: 0.85rem; letter-spacing: 1px; }
+
+/* tabel jadwal */
+.table-schedule {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+.table-schedule th {
+  background: var(--dark3);
+  color: var(--gold);
+  padding: 0.9rem 1rem;
+  text-align: center;
+  border: 1px solid #2a2418;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.table-schedule td {
+  padding: 0.75rem 1rem;
+  border: 1px solid #1e1e1e;
+  text-align: center;
+  color: var(--muted);
+  vertical-align: middle;
+}
+.table-schedule td:first-child { color: var(--text); font-weight: 500; }
+.booked-cell {
+  background: rgba(201,168,76,0.1);
+  color: var(--gold) !important;
+  font-size: 0.8rem;
+  border-radius: 3px;
+  padding: 4px 8px;
+  display: inline-block;
+}
+
+/* tempat qrisssssss */
+.modal-content {
+  background: var(--dark2) !important;
+  border: 1px solid #2a2418 !important;
+}
+.modal-header { border-bottom: 1px solid #2a2418 !important; }
+.modal-footer { border-top: 1px solid #2a2418 !important; }
+.qris-box {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: inline-block;
+  text-align: center;
+}
+.qris-box img { width: 200px; height: 200px; }
+
+/* header halaman */
+.page-header {
+  padding: 5rem 0 3rem;
+  background: linear-gradient(180deg, #111 0%, var(--dark) 100%);
+  border-bottom: 1px solid #2a2418;
+}
+.page-header h1 { font-size: 2.5rem; }
+
+/* tempat taruh foto */
+.img-studio {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 4px;
+  background: var(--dark4);
+  display: block;
+}
+.img-placeholder {
+  width: 100%;
+  height: 280px;
+  background: var(--dark4);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #2a2418;
+  color: var(--muted);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
